@@ -4,41 +4,41 @@
 
 #ifndef EXTRACLASE_NODE_H
 #define EXTRACLASE_NODE_H
-
 #include "Collector.h"
 #include <stdlib.h>
 #include "List.h"
 
-// Creo que es necesario que esta clase herede de Collector e implemente los metodos New y Delete diferente o algo parecido
-// Luego, en List se utilizan unos new Node(), en lugar de eso deberian implementarse los new de Collector.
-
+/**
+ * Clase encargada de almacenar un int y puntero a siguiente
+ * */
 class Node {
     int valor;
     Node *next;
 
 public:
+    /**
+    * Constructor predeterminado de Node
+    * */
     Node(){
         next = nullptr;
         valor = 0;
     }
-
+    /**
+    * Constructor de Node
+    * */
     Node(int value){
         this->next = nullptr;
         this->valor = value;
     }
 
-    void setNext(Node &next);
-    Node *getNext();
-    int getValue();
-
-    int getValor() const;
-
-    void setValor(int valor);
-
-    void setNext(Node *next);
-
-    void operator delete(void *ptr);
-    void *operator new(std::size_t size, int te);
+    void setNext(Node &next);   //Funcion para establecer el siguiente Node
+    Node *getNext();    //Funcion para obtener el siguiente Node
+    int getValue(); //Funcion para obtener valor
+    int getValor() const;   //Funcion para obtener valor
+    void setValor(int valor);   //Funcion para establecer valor
+    void setNext(Node *next);   //Funcion para establecer siguiente nodo
+    void operator delete(void *ptr);    //Funcion para liberar el puntero
+    void *operator new(std::size_t size, int te);   //Funcion para obtener un puntero reciclado/nuevo
 
 };
 

@@ -9,6 +9,9 @@
 
 class Node;
 class Collector;
+/**
+ * Clase encargada de almacenar Nodos
+ * */
 class List {
 
     Node *head;  // Defino puntero del inicio de la lista /**!> Puntero que apunta al primer elemento de la lista*/

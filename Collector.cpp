@@ -36,6 +36,9 @@ void Collector::display(){ // Borra la lista, be careful.
     std::cout<<"End\n";
 }
 
+/**
+ * Retorna la lista de Collector
+ * */
 std::list<Node*> *Collector::getfree(){
     return free;
 }
