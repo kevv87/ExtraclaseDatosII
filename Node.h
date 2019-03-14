@@ -30,6 +30,13 @@ public:
     void setNext(Node &next);
     Node *getNext();
     int getValue();
+
+    int getValor() const;
+
+    void setValor(int valor);
+
+    void setNext(Node *next);
+
     void operator delete(void *ptr);
     void *operator new(std::size_t size, int te);
 

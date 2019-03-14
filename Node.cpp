@@ -32,3 +32,15 @@ void Node::operator delete(void *ptr){
 void* Node::operator new(size_t size, int te) {
     return List::cltr->retrive(te);
 }
+
+int Node::getValor() const {
+    return valor;
+}
+
+void Node::setValor(int valor) {
+    Node::valor = valor;
+}
+
+void Node::setNext(Node *next) {
+    Node::next = next;
+}
